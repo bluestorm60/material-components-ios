@@ -110,6 +110,7 @@
  Default is 1.
  */
 @property(nonatomic, assign) NSUInteger minimumLines;
+@property(nonatomic, assign) CGFloat paddingValue;
 
 @property(nonatomic, assign) BOOL isPhone;
 
