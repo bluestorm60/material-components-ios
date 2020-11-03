@@ -187,8 +187,9 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 
     path = [self roundedPathFromRect:[self borderRect]
                        withTextSpace:placeholderWidth
-                       leadingOffset:MDCTextInputOutlinedTextFieldFullPadding -
-                                     MDCTextInputOutlinedTextFieldFloatingPlaceholderPadding / 2];
+                       leadingOffset:self.isPhone ? (MDCTextInputOutlinedTextFieldFullPadding -
+                                                     MDCTextInputOutlinedTextFieldFloatingPlaceholderPadding / 2) + 45 + self.paddingValue : (MDCTextInputOutlinedTextFieldFullPadding -
+                                                                                                                          MDCTextInputOutlinedTextFieldFloatingPlaceholderPadding / 2)];
   } else {
     CGSize cornerRadius = CGSizeMake(self.borderRadius, self.borderRadius);
     path = [UIBezierPath bezierPathWithRoundedRect:[self borderRect]
@@ -323,7 +324,7 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
   CGFloat placeholderEstimatedHeight =
       ceil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
   return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
-         MDCTextInputOutlinedTextFieldNormalPlaceholderPadding;
+         MDCTextInputOutlinedTextFieldNormalPlaceholderPadding - 14;
 }
 
 @end

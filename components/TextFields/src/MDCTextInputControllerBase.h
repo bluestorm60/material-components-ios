@@ -111,4 +111,6 @@
  */
 @property(nonatomic, assign) NSUInteger minimumLines;
 
+@property(nonatomic, assign) BOOL isPhone;
+
 @end

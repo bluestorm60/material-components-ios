@@ -63,4 +63,8 @@ extern NSString *_Nonnull const MDCTextInputDidToggleEnabledNotification;
 @property(nonatomic, copy, nullable) void (^traitCollectionDidChangeBlock)
     (MDCTextField *_Nonnull textField, UITraitCollection *_Nullable previousTraitCollection);
 
+@property(nonatomic, assign) BOOL withPadding;
+@property(nonatomic, assign) NSInteger  placeHolderPadding;
+
+
 @end
